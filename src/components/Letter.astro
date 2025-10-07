@@ -1,0 +1,112 @@
+<div
+    class="w-full flex flex-col items-center justify-center min-h-screen bg-black text-white" id="carta"
+>
+    <div
+        class="flex flex-col md:flex-row justify-center items-start gap-10 mb-10"
+    >
+        <a
+            href="https://www.youtube.com/watch?v=qvF7L1NmC3c&list=RDqvF7L1NmC3c"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-[276px] h-[434px] rounded-xl overflow-hidden shadow-md flex justify-center items-center transition-transform duration-200 hover:scale-105"
+        >
+            <img
+                src="https://i.pinimg.com/736x/71/52/47/715247d9a0125042e9c858fc33e4dc1d.jpg"
+                alt="photo1"
+                class="w-full h-full object-cover"
+            />
+        </a>
+
+        <div
+            class="w-[276px] h-[434px] rounded-xl bg-neutral-100 shadow-md flex items-center justify-center p-6 text-center text-sm text-black"
+        >
+            <p
+                id="mi-parrafo"
+                class="font-serif italic tracking-wide leading-relaxed"
+            >
+                Soy muy malo con las palabras, de verdad. Casi siempre que
+                quiero decirte algo, tengo tantas cosas en la cabeza que termino
+                sin decir nada. Pero esta vez solo quiero agradecerte por ser
+                como eres, por hacerme tan feliz, por ser esa persona increíble
+                y por ocupar un lugar tan especial en mi corazón.
+                &lt;3 &lt;3 &lt;3 psd: la cancion de abajito es como me siento en estos momentos contigo<br /><br />
+                <span
+                    class="font-bold text-pink-500 hover:cursor-crosshair hover:text-red-700"
+                    >Te quiero mucho Dani &lt;3</span
+                ><br><br>
+                
+            </p>
+            <script>
+                function wrapWords(node) {
+                    node.childNodes.forEach((child) => {
+                        if (child.nodeType === Node.TEXT_NODE) {
+                            const palabras = child.textContent.split(/(\s+)/);
+                            const fragment = document.createDocumentFragment();
+                            palabras.forEach((palabra) => {
+                                if (palabra.trim() === "") {
+                                    fragment.appendChild(
+                                        document.createTextNode(palabra),
+                                    );
+                                } else {
+                                    const span = document.createElement("span");
+                                    span.className =
+                                        "hover:text-pink-400 hover:scale-95 transition-transform duration-200 hover:cursor-crosshair";
+                                    span.textContent = palabra;
+                                    fragment.appendChild(span);
+                                }
+                            });
+                            child.replaceWith(fragment);
+                        } else if (child.nodeType === Node.ELEMENT_NODE) {
+                            wrapWords(child);
+                        }
+                    });
+                }
+
+                const parrafo = document.getElementById("mi-parrafo");
+                wrapWords(parrafo);
+            </script>
+        </div>
+
+        <a
+            href="https://open.spotify.com/intl-es/track/0ZAJ660VP57lLK4U7NlGOy?si=592218c0039345ad"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-[276px] h-[434px] rounded-xl overflow-hidden shadow-md flex justify-center items-center transition-transform duration-200 hover:scale-105"
+        >
+            <img
+                src="https://i.pinimg.com/736x/97/74/61/97746189e6bde88bd866b135f4705f92.jpg"
+                alt="photo2"
+                class="w-full h-full object-cover"
+            />
+        </a>
+    </div>
+
+    <div class="flex justify-center items-center text-lg italic gap-3">
+        <span
+            class="not-italic hover:text-pink-400 hover:scale-95 inline-block transition-transform duration-200 cursor-crosshair"
+            >Me</span
+        >
+        <span
+            class="hover:text-pink-400 hover:scale-95 inline-block transition-transform duration-200 cursor-crosshair"
+            >+</span
+        >
+        <span
+            class="not-italic hover:text-pink-400 hover:scale-95 inline-block transition-transform duration-200 cursor-crosshair"
+            >You</span
+        >
+        <span
+            class="hover:text-pink-400 hover:scale-95 inline-block transition-transform duration-200 cursor-crosshair"
+            >:</span
+        >
+        <a
+            href="https://www.youtube.com/watch?v=5xM0k1EkTBc"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <em
+                class="hover:text-pink-800 hover:scale-95 inline-block transition-transform duration-200 cursor-pointer"
+                >Love.</em
+            >
+        </a>
+    </div>
+</div>

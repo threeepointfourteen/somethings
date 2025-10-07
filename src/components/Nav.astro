@@ -1,0 +1,26 @@
+<nav class="bg-black text-white px-6 py-4 flex justify-center">
+    <ul class="flex items-center">
+        <li>
+            <a href="#hero" class="mx-7 hover:text-pink-400 font-semibold hover:scale-110 transition-all duration-200 hover:cursor-crosshair block">Home</a>
+        </li>
+        <li>
+            <a href="#carta" class="mx-7 hover:text-pink-400 text-xl hover:scale-110 transition-all duration-200 hover:cursor-crosshair block" aria-label="Favorites">&lt;3</a>
+        </li>
+        <li>
+            <a href="#music" class="mx-7 hover:text-pink-400 font-semibold hover:scale-110 transition-all duration-200 hover:cursor-crosshair block">Music</a>
+        </li>
+    </ul>   
+</nav>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+</script>
